@@ -1,6 +1,6 @@
 <template >
     <ul class="user_list_container">
-        <li class="user_item_container" v-for="user in userList" :key="user.id">
+        <li class="user_item_container" v-for="user in users" :key="user.id">
             <UserCard :user="user"/>
         </li>
     </ul>
@@ -49,14 +49,13 @@ const userList = ref(
 const fetchUsers = () => {
     axios.get('https://reqres.in/api/users')
     .then(response => {
-        users.value = response.data
+        users.value = response.data.data
     })
 }
 
 onMounted(() => {
     fetchUsers()
 })
-console.log(users)
 
 </script>
 <style scoped>

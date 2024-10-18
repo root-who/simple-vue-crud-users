@@ -48,13 +48,14 @@ function handleFormState(){
 
 .v-enter-active,
 .v-leave-active {
-    transition: transform 0.5s ease;
+    transition: transform 2s ease;
 }
 
-.v-enter-from,
-.v-leave-to {
+.v-enter-from, .v-leave-to{
     transform: translateY(-120%);
 }
+
+
 .container{
     display: flex;
     flex-direction: column;

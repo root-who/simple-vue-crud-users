@@ -2,11 +2,11 @@
     <div class="container">
         <div class="user_container">
             <div class="image_container">
-                <img class="user_profile" src="https://i.pinimg.com/736x/33/72/19/337219e837211ce669bad57344620572.jpg" alt="">
+                <img class="user_profile" :src="props.user.avatar" alt="">
             </div>
             <div class="info_container">
                 <span class="user_id">#{{props.user.id}}</span> 
-                <span class="user_name">{{props.user.name}}</span>
+                <span class="user_name">{{ props.user.first_name + " " + props.user.last_name}}</span>
                <span class="user_email">{{props.user.email}}</span>
             </div>
         </div>
